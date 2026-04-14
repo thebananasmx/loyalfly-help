@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import React from "react";
 import "./globals.css";
 import { Search, Book, PlayCircle, Star } from 'lucide-react';
+import MobileNavigation from "@/components/MobileNavigation";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
@@ -28,7 +29,8 @@ export default function RootLayout({
       <body className={`${plusJakartaSans.variable} font-sans antialiased min-h-screen bg-white flex flex-col text-text-main`}>
         {/* Header */}
         <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-8 w-1/3">
+          <div className="flex items-center gap-4 sm:gap-8 w-1/3">
+            <MobileNavigation />
             <a href="/" className="flex items-center">
               <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_desk.svg" alt="Loyalfly" className="hidden sm:block h-7 w-auto" />
               <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_mob.svg" alt="Loyalfly" className="block sm:hidden h-7 w-auto" />
