@@ -40,7 +40,7 @@ export default async function TarjetaPage({ params }: { params: Promise<{ slug: 
 
   if (!data) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="flex items-center justify-center">
         <h1 className="text-2xl font-bold text-gray-800">Rubro no encontrado</h1>
       </div>
     );
@@ -54,43 +54,22 @@ export default async function TarjetaPage({ params }: { params: Promise<{ slug: 
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="max-w-3xl">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <header className="bg-white border-b border-gray-100 py-6 px-6 sm:px-12 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <a href="/" className="flex items-center">
-            <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_desk.svg" alt="Loyalfly" className="hidden sm:block h-8 w-auto" />
-            <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_mob.svg" alt="Loyalfly" className="block sm:hidden h-8 w-auto" />
-          </a>
-          <nav className="flex gap-4">
-            <a href="/help/flujos" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-              Flujos
-            </a>
-            <a href="/help/como-configurar" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-              Centro de Ayuda
-            </a>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="bg-primary-bg py-24 px-6 sm:px-12 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main mb-6 tracking-tight">{data.title}</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">{data.description}</p>
-        </div>
-      </section>
+      <div className="mb-12 border-b border-gray-100 pb-8">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main mb-6 tracking-tight">{data.title}</h1>
+        <p className="text-xl text-gray-600 leading-relaxed">{data.description}</p>
+      </div>
 
       {/* Content Section */}
-      <section className="py-16 px-6 sm:px-12">
-        <div className="max-w-3xl mx-auto prose prose-lg prose-headings:font-bold prose-headings:text-text-main prose-a:text-primary hover:prose-a:text-primary-hover prose-p:text-gray-600 prose-li:text-gray-600">
-          <div dangerouslySetInnerHTML={{ __html: data.content }} />
-        </div>
-      </section>
-    </main>
+      <div className="prose prose-lg prose-headings:font-bold prose-headings:text-text-main prose-a:text-primary hover:prose-a:text-primary-hover prose-p:text-gray-600 prose-li:text-gray-600">
+        <div dangerouslySetInnerHTML={{ __html: data.content }} />
+      </div>
+    </div>
   );
 }
