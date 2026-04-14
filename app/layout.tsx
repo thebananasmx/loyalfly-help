@@ -29,8 +29,7 @@ export default function RootLayout({
       <body className={`${plusJakartaSans.variable} font-sans antialiased min-h-screen bg-white flex flex-col text-text-main`}>
         {/* Header */}
         <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4 sm:gap-8 w-1/3">
-            <MobileNavigation />
+          <div className="flex items-center gap-8 w-1/3">
             <a href="/" className="flex items-center">
               <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_desk.svg" alt="Loyalfly" className="hidden sm:block h-7 w-auto" />
               <img src="https://raw.githubusercontent.com/thebananasmx/loyalfly-3-5/refs/heads/main/assets/logo_mob.svg" alt="Loyalfly" className="block sm:hidden h-7 w-auto" />
@@ -44,11 +43,12 @@ export default function RootLayout({
               className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
             />
           </div>
-          <div className="flex items-center justify-end gap-6 w-1/3">
+          <div className="flex items-center justify-end gap-4 sm:gap-6 w-1/3">
             <a href="#" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-primary">Estado del sistema</a>
             <a href="#" className="hidden sm:block px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-colors">
               Ir al Panel
             </a>
+            <MobileNavigation />
           </div>
         </header>
 
