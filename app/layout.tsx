@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     icon: "https://res.cloudinary.com/dg4wbuppq/image/upload/f_auto,q_auto,w_32/v1773168526/favicon_izlhv3.png",
     apple: "https://res.cloudinary.com/dg4wbuppq/image/upload/f_auto,q_auto,w_180/v1767634073/apple-touch-icon_o7gyu5.png",
   },
+  verification: {
+    google: "FNTSSHlkM9iFIx-sa8t_9N_uKx6XqzKxADgeuHDXk5c",
+  },
 };
 
 export default function RootLayout({
