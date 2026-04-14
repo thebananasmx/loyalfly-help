@@ -46,7 +46,7 @@ export default function RootLayout({
           </div>
           <div className="flex items-center justify-end gap-6 w-1/3">
             <a href="#" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-primary">Estado del sistema</a>
-            <a href="#" className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-colors">
+            <a href="#" className="hidden sm:block px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-colors">
               Ir al Panel
             </a>
           </div>
