@@ -1,19 +1,28 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gray-50">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">
-          Loyalfly Help Center
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 sm:p-24 bg-[#ffffff]">
+      <div className="z-10 max-w-3xl w-full flex flex-col items-center justify-center text-center">
+        <div className="mb-8 inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-primary-bg text-primary font-semibold text-sm tracking-wide">
+          Centro de Ayuda
+        </div>
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-text-main mb-6">
+          Loyalfly Docs
         </h1>
-        <p className="text-center text-lg text-gray-700 mb-8">
-          Bienvenido a la plataforma de soporte y documentación.
+        <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
+          Encuentra guías, tutoriales y respuestas a tus preguntas sobre cómo crear y gestionar tu programa de lealtad digital.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
           <a
             href="/tarjetas/restaurantes"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 transition-all duration-200"
           >
-            Ver Tarjetas para Restaurantes
+            Ver Guía de Restaurantes
+          </a>
+          <a
+            href="/help/como-configurar"
+            className="px-8 py-4 bg-white text-text-main font-semibold rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-all duration-200 shadow-sm"
+          >
+            Cómo Configurar
           </a>
         </div>
       </div>

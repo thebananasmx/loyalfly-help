@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #4D17FF;
+  --color-primary-hover: #3D12CC;
+  --color-primary-light: #7B52FF;
+  --color-primary-bg: #EDE8FF;
+  --color-text-main: #212121;
+  
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  color: var(--color-text-main);
+  background-color: #ffffff;
+}

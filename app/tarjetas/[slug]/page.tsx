@@ -60,17 +60,30 @@ export default async function TarjetaPage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
+      <header className="bg-white border-b border-gray-100 py-6 px-6 sm:px-12 sticky top-0 z-10">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <a href="/" className="text-xl font-extrabold text-primary tracking-tight">
+            Loyalfly
+          </a>
+          <nav>
+            <a href="/help/como-configurar" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+              Centro de Ayuda
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20 px-4">
+      <section className="bg-primary-bg py-24 px-6 sm:px-12 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">{data.title}</h1>
-          <p className="text-xl opacity-90">{data.description}</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main mb-6 tracking-tight">{data.title}</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">{data.description}</p>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto prose lg:prose-xl">
+      <section className="py-16 px-6 sm:px-12">
+        <div className="max-w-3xl mx-auto prose prose-lg prose-headings:font-bold prose-headings:text-text-main prose-a:text-primary hover:prose-a:text-primary-hover prose-p:text-gray-600 prose-li:text-gray-600">
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </div>
       </section>

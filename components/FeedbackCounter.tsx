@@ -29,23 +29,25 @@ export default function FeedbackCounter({ articleId }: { articleId: string }) {
   };
 
   return (
-    <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
-      <h3 className="text-lg font-medium text-gray-900 mb-4">¿Te resultó útil este artículo?</h3>
+    <div className="mt-12 p-8 bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
+      <h3 className="text-xl font-bold text-text-main mb-6">¿Te resultó útil este artículo?</h3>
       {voted ? (
-        <p className="text-green-600 font-medium">¡Gracias por tu feedback!</p>
+        <div className="px-6 py-3 bg-green-50 text-green-700 font-semibold rounded-xl border border-green-100">
+          ¡Gracias por tu feedback! Nos ayuda a mejorar.
+        </div>
       ) : (
         <div className="flex gap-4">
           <button
             onClick={() => handleVote(true)}
-            className="px-4 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition"
+            className="px-6 py-3 bg-white text-text-main font-semibold border border-gray-200 rounded-xl hover:border-primary hover:text-primary hover:bg-primary-bg transition-all duration-200 shadow-sm flex items-center gap-2"
           >
-            👍 Sí, fue útil
+            <span>👍</span> Sí, fue útil
           </button>
           <button
             onClick={() => handleVote(false)}
-            className="px-4 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition"
+            className="px-6 py-3 bg-white text-text-main font-semibold border border-gray-200 rounded-xl hover:border-red-500 hover:text-red-600 hover:bg-red-50 transition-all duration-200 shadow-sm flex items-center gap-2"
           >
-            👎 No mucho
+            <span>👎</span> No mucho
           </button>
         </div>
       )}
